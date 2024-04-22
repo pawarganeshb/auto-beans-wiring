@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="pay" class="com.payment.Payment">
+		<property name="totalAmount" value="30000" />
+	</bean>
+	<!--
+	private String orderId;
+	private double price;
+	private int orderNo;
+-->
+	<bean id="order" class="com.orders.Orders">
+		<property name="orderId" value="ORD212" />
+		<property name="price" value="8900" />
+		<property name="orderNo" value="754" />
+	</bean>
+	<bean id="item" class="com.payment.Items" autowire="byName">
+		<property name="itemName" value="Laptop" />
+	</bean>
+
+</beans>
+
